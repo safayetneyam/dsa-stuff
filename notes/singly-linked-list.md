@@ -179,3 +179,14 @@ void reverseList() {
     head = prev;
 }
 ```
+
+### printList : Global
+```cpp
+void printList() {
+    Node *cur = head;
+    while (cur != NULL) {
+        cout << cur -> data << " ";
+        cur = cur -> next;
+    } cout << endl;
+}
+```
