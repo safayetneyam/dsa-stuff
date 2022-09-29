@@ -107,7 +107,8 @@ void eraseData(int data) {
 }
 ```
 
-### eraseData (using findNode) : Global
+### eraseData : Global
+- include findNode function
 ```cpp
 void eraseData(int data) {
     Node *dataNode = findNode(data);
@@ -121,5 +122,21 @@ void eraseData(int data) {
         }
         delete dataNode;
     } else cout << "Data Not Found!" << endl;
+}
+```
+
+### addAfter (passing dataNode) : Global
+- include findNode function
+- by passing (found from findNode function) and the data to be added
+```cpp
+void addAfter(Node *prevNode, int data) {
+    Node *newNode = new Node();
+    newNode -> data = data;
+    newNode -> next = NULL;
+
+    if (prevNode != NULL) {
+        newNode -> next = prevNode -> next;
+        prevNode -> next = newNode;
+    } else cout << "Key Not Found" << endl;
 }
 ```
