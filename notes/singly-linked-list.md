@@ -190,3 +190,39 @@ void printList() {
     } cout << endl;
 }
 ```
+
+### insertAtPosition : Global
+```cpp
+int itemCount() {
+    int count = 0;
+    Node *cur = head; 
+    while (cur) {
+        count++;
+        cur = cur -> next;
+    }
+    return count;
+}
+
+void insertAtPosition(int pos, int data) {
+    if (pos < 1 || pos > itemCount() + 1) {
+        cout << "Invalid Position!" << endl;
+        return;
+    }
+
+    Node *newNode = new Node();
+    newNode -> data = data;
+    newNode -> next = NULL;
+    
+    if (pos == 1) {
+        if (head) newNode -> next = head;
+        head = newNode;
+    } else {
+        Node *nodeBefore = head;
+        for (int i = 1; i < pos - 1; i++) {
+            nodeBefore = nodeBefore -> next;
+        }
+        newNode -> next = nodeBefore -> next;
+        nodeBefore -> next = newNode;
+    }
+}
+```
