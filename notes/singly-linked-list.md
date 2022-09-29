@@ -70,7 +70,19 @@ void popBack() {
     delete delNode;
 ```
 
-### eraseData (Delete A Particular Data) : Global
+### findNode : Global
+```cpp
+Node* findNode(int data) {
+    Node* cur = head;
+    while (cur) {
+        if (cur -> data == data) return cur;
+        cur = cur -> next;
+    }
+    return NULL;
+}
+```
+
+### eraseData : Global
 ```cpp
 void eraseData(int data) {
     Node *dataNode = NULL, *checkNode = head;
@@ -95,18 +107,8 @@ void eraseData(int data) {
 }
 ```
 
+### eraseData (using findNode) : Global
 ```cpp
-// Alternative
-
-Node* findNode(int data) {
-    Node* cur = head;
-    while (cur) {
-        if (cur -> data == data) return cur;
-        cur = cur -> next;
-    }
-    return NULL;
-}
-
 void eraseData(int data) {
     Node *dataNode = findNode(data);
     Node *cur = head;
