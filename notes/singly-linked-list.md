@@ -125,7 +125,7 @@ void eraseData(int data) {
 }
 ```
 
-### addAfter (passing dataNode) : Global
+### addAfter : Global
 - include findNode function
 - by passing (found from findNode function) and the data to be added
 ```cpp
