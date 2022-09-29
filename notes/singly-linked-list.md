@@ -59,3 +59,13 @@ void popBack() {
     delete delNode;
 }
 ```
+
+```cpp
+    // Alternative & Short
+    
+    Node *cur = head;
+    while(cur -> next -> next) cur = cur -> next;
+    Node *delNode = cur -> next;
+    cur -> next = NULL;
+    delete delNode;
+```
