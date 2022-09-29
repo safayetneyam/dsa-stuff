@@ -69,3 +69,55 @@ void popBack() {
     cur -> next = NULL;
     delete delNode;
 ```
+
+### eraseData (Delete A Particular Data) : Global
+```cpp
+void eraseData(int data) {
+    Node *dataNode = NULL, *checkNode = head;
+    while (checkNode) {
+        if (checkNode -> data == data) {
+            dataNode = checkNode;
+            break;
+        }
+        checkNode = checkNode -> next;
+    }
+
+    Node *cur = head;
+    if (dataNode) {
+        if (dataNode == head) head = head -> next; 
+        else {
+            while (cur -> next != dataNode) cur = cur -> next;
+            Node *prevNode = cur;
+            prevNode -> next = dataNode -> next;
+        }
+        delete dataNode;
+    } else cout << "Data Not Found!" << endl;
+}
+```
+
+```cpp
+// Alternative
+
+Node* findNode(int data) {
+    Node* cur = head;
+    while (cur) {
+        if (cur -> data == data) return cur;
+        cur = cur -> next;
+    }
+    return NULL;
+}
+
+void eraseData(int data) {
+    Node *dataNode = findNode(data);
+    Node *cur = head;
+    if (dataNode) {
+        if (dataNode == head) head = head -> next; 
+        else {
+            while (cur -> next != dataNode) cur = cur -> next;
+            Node *prevNode = cur;
+            prevNode -> next = dataNode -> next;
+        }
+        delete dataNode;
+    } else cout << "Data Not Found!" << endl;
+}
+```
