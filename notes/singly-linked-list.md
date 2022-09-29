@@ -137,6 +137,29 @@ void addAfter(Node *prevNode, int data) {
     if (prevNode != NULL) {
         newNode -> next = prevNode -> next;
         prevNode -> next = newNode;
-    } else cout << "Key Not Found" << endl;
+    } else cout << "Key Not Found!" << endl;
+}
+```
+
+### addBefore : Global
+- include findNode function
+- by passing (found from findNode function) and the data to be added
+```cpp
+void addBefore(Node* nextNode, int data) {
+    Node* newNode = new Node();
+    newNode -> data = data;
+    newNode -> next = NULL;
+
+    if (nextNode) {
+        if (nextNode == head) {
+            newNode -> next = head;
+            head = newNode;
+        } else {
+            Node* cur = head;
+            while (cur -> next != nextNode) cur = cur -> next;
+            newNode -> next = nextNode;
+            cur -> next = newNode;
+        }
+    } else cout << "Key Not Found!" << endl;
 }
 ```
