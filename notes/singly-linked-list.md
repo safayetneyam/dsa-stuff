@@ -47,7 +47,7 @@ void popBack() {
 
     if (head -> next == NULL) {
         Node *delNode = head;
-        head = head -> next;
+        head = head -> next;    // head = NULL;
         delete delNode;
         return;
     }
