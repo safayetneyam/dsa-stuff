@@ -163,3 +163,19 @@ void addBefore(Node* nextNode, int data) {
     } else cout << "Key Not Found!" << endl;
 }
 ```
+
+### reverseList : Global
+```cpp
+void reverseList() {
+    Node *prev, *current, *after;
+    prev = NULL;
+    current = head;
+    while (current != NULL) {
+        after = current -> next;
+        current -> next = prev;
+        prev = current;
+        current = after;
+    }
+    head = prev;
+}
+```
