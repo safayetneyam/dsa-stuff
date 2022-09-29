@@ -1,6 +1,6 @@
 ## Singly Linked List 
 
-### pushFront (Insert/Add at First) : Global
+### pushFront : Global
 ```cpp
 void pushFront(int data) {
     Node *newNode = new Node();
@@ -12,7 +12,7 @@ void pushFront(int data) {
 }
 ```
 
-### pushBack (Insert/Add at Last) : Global
+### pushBack : Global
 ```cpp
 void pushBack(int data) {
     Node *newNode = new Node();
@@ -27,7 +27,7 @@ void pushBack(int data) {
 }
 ```
 
-### popFront (Delete at First) : Global
+### popFront : Global
 ```cpp
 void popFront() {
     if (head == NULL) return; 
@@ -39,7 +39,7 @@ void popFront() {
 }
 ```
 
-### popBack (Delete at Last) : Global
+### popBack : Global
 ```cpp
 void popBack() {
     if (head == NULL) return; 
