@@ -1,4 +1,4 @@
-#### Useful Resources 
+<b> Useful Resources </b> 
 - My Code School - [Lectures](https://www.youtube.com/watch?v=h-HBipu_1P0&list=PL2_aWCzGMAwLZp6LMUKI3cc7pgGsasm2_)
 
 ### Basic Pointer
