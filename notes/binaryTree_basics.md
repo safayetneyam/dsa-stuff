@@ -1,4 +1,4 @@
-# Binary Tree
+## Binary Tree
 `Ref. GFG`
 
 A tree whose elements have at most 2 children is called a binary tree. Since each element in a binary tree can have only 2 children, we typically name them the left and right children.
@@ -218,7 +218,7 @@ bstNode *getSuccessor(bstNode *root, int data) {
 }
 ```
 
-## Binary Tree
+## Traversal Techniques
 
 ### Node Structure
 ```cpp=
