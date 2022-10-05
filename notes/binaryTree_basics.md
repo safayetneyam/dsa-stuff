@@ -332,6 +332,10 @@ void postorder(bstNode *root) {
 }
 ```
 
+## Other Implementations
+- Check if Binary Search Tree
+- Check if Binary Search Tree (Inorder Traversal)
+
 ### Check if Binary Search Tree
 ```
 Note
